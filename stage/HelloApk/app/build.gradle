@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+}
+
+// ---- 读取签名配置 ----
+// 密码不写死在构建脚本里，而是从 keystore.properties 读；
+// 该文件已在 .gitignore 中被排除，不会进版本库。
+def keystorePropsFile = rootProject.file('keystore.properties')
+def keystoreProps = new Properties()
+if (keystorePropsFile.exists()) {
+    keystoreProps.load(new FileInputStream(keystorePropsFile))
+}
+
+android {
+    // 应用包名（取代了老版本 AndroidManifest 里的 package 属性）
+    namespace 'com.example.helloapk'
+    // 用哪个 Android 版本的 SDK 编译
+    compileSdk 36
+    // 编译工具链版本。不写这行 AGP 会去装它默认的 35.0.0；
+    // 显式指定成已安装的 36.0.0，可避免重复下载和版本漂移。
+    buildToolsVersion '36.0.0'
+
+    defaultConfig {
+        applicationId 'com.example.helloapk'   // 装到手机上的唯一标识
+        minSdk 24        // 最低支持 Android 7.0
+        targetSdk 36     // 目标版本，影响系统对 App 的行为约束
+        versionCode 1    // 整数，每次上架必须 +1
+        versionName '1.0'// 给用户看的版本号
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(keystoreProps['storeFile'])
+            storePassword keystoreProps['storePassword']
+            keyAlias keystoreProps['keyAlias']
+            keyPassword keystoreProps['keyPassword']
+            enableV1Signing true   // Android 6.0 及以下需要
+            enableV2Signing true   // Android 7.0+ 的主流方案
+        }
+    }
+
+    buildTypes {
+        release {
+            // 正式包签名：不配这一行，release 包无法安装
+            signingConfig signingConfigs.release
+            // 代码混淆/压缩，先关掉，等业务稳定再开
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // debug 包加上后缀，可以和正式包同时装在一台手机上
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-debug'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

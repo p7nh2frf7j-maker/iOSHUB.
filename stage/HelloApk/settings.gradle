@@ -1,0 +1,29 @@
+// ============================================================
+// 这个文件决定「去哪里下载依赖」
+// 国内直连 Google Maven 常常超时，所以把阿里云镜像放在前面，
+// 官方源放在后面兜底 —— 镜像没命中时会自动回落到 Google。
+// ============================================================
+pluginManagement {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    // 禁止各个模块自己声明仓库，统一在这里管理
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = 'HelloApk'
+include ':app'

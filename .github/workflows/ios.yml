@@ -1,0 +1,90 @@
+name: iOS Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-simulator:
+    name: Build (iOS Simulator, unsigned)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      # 自愈：手写 pbxproj 在个别 Xcode 版本上可能读不动，
+      # 那就用 XcodeGen 按 project.yml 现场重生成一个等价工程。
+      - name: Ensure project is readable (fallback to XcodeGen)
+        run: |
+          if xcodebuild -list -project iOSHUB.xcodeproj > /dev/null 2>&1; then
+            echo "✅ 工程文件可读，直接使用。"
+          else
+            echo "⚠️ 工程文件无法读取，改用 XcodeGen 重新生成。"
+            brew install xcodegen
+            xcodegen generate --spec project.yml
+          fi
+
+      - name: Build for simulator
+        run: |
+          xcodebuild \
+            -project iOSHUB.xcodeproj \
+            -scheme iOSHUB \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            build
+
+  build-unsigned-ipa:
+    name: Package unsigned IPA (Windows 可用)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Ensure project is readable (fallback to XcodeGen)
+        run: |
+          if xcodebuild -list -project iOSHUB.xcodeproj > /dev/null 2>&1; then
+            echo "✅ 工程文件可读，直接使用。"
+          else
+            echo "⚠️ 工程文件无法读取，改用 XcodeGen 重新生成。"
+            brew install xcodegen
+            xcodegen generate --spec project.yml
+          fi
+
+      - name: Build for device without signing
+        run: |
+          xcodebuild \
+            -project iOSHUB.xcodeproj \
+            -scheme iOSHUB \
+            -configuration Release \
+            -sdk iphoneos \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            build
+
+      - name: Package Payload into .ipa
+        run: |
+          APP_PATH="build/Build/Products/Release-iphoneos/iOSHUB.app"
+          test -d "$APP_PATH"
+          rm -rf Payload iOSHUB-unsigned.ipa
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -qry iOSHUB-unsigned.ipa Payload
+          ls -lh iOSHUB-unsigned.ipa
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: iOSHUB-unsigned-ipa
+          path: iOSHUB-unsigned.ipa
+          if-no-files-found: error

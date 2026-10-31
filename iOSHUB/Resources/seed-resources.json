@@ -1,0 +1,1176 @@
+[
+  {
+    "id": "trollstore",
+    "name": "TrollStore",
+    "category": "trollstore",
+    "summary": "利用 CoreTrust 漏洞做「永久签名」的巨魔商店，装上之后 IPA 不会因证书过期而失效。",
+    "detail": "TrollStore 为已签名的 IPA 重新做一份设备信任的签名，因此应用可以长期保留，不需要每 7 天重新签一次。它的安装入口本身依赖具体 iOS 版本的漏洞状态，通常需要搭配 TrollInstallerX 之类的辅助工具。",
+    "symbol": "shippingbox.fill",
+    "developer": "Lars Fröder (opa334)",
+    "developerURL": "https://github.com/opa334",
+    "githubURL": "https://github.com/opa334/TrollStore",
+    "downloadURL": "https://github.com/opa334/TrollStore/releases",
+    "sourceURL": "https://github.com/opa334/TrollStore",
+    "tutorialURL": "https://github.com/opa334/TrollStore/blob/main/README.md",
+    "supportedIOS": [
+      "iOS 14.0 – 16.6.1",
+      "iOS 17.0（部分设备）"
+    ],
+    "supportedDevices": [
+      "A12 及以上设备为主，具体见官方支持列表"
+    ],
+    "compatibility": "partial",
+    "verificationNote": "可用的 iOS 版本与设备组合随 CoreTrust 状态变化，请严格按官方 README 与 Release 说明操作。",
+    "risk": "caution",
+    "tags": [
+      "trollstore",
+      "巨魔",
+      "永久签名",
+      "ipa"
+    ],
+    "screenshots": [],
+    "isFeatured": true
+  },
+  {
+    "id": "dopamine",
+    "name": "Dopamine",
+    "category": "jailbreak",
+    "summary": "面向 iOS 15 – 16.6.1 的免电脑越狱工具，基于 Fugu15 的无根（rootless）方案。",
+    "detail": "Dopamine 是 opa334 维护的越狱工具，属于 rootless 越狱：插件装在 /var/jb 而不是系统根目录，因此重启后丢失越狱、需要重新引导。适合对越狱生态较熟悉、能接受重启失效的用户。",
+    "symbol": "lock.open.fill",
+    "developer": "Lars Fröder (opa334)",
+    "developerURL": "https://github.com/opa334",
+    "githubURL": "https://github.com/opa334/Dopamine",
+    "downloadURL": "https://github.com/opa334/Dopamine/releases",
+    "sourceURL": "https://github.com/opa334/Dopamine",
+    "tutorialURL": "https://github.com/opa334/Dopamine/blob/main/README.md",
+    "supportedIOS": [
+      "iOS 15.0 – 16.6.1"
+    ],
+    "supportedDevices": [
+      "arm64e 设备（A12 及以上，具体见官方说明）"
+    ],
+    "compatibility": "partial",
+    "verificationNote": "支持的机型与系统版本严格受官方限制，越界尝试只会失败或开机异常。",
+    "risk": "caution",
+    "tags": [
+      "dopamine",
+      "jailbreak",
+      "越狱",
+      "rootless",
+      "fugu15"
+    ],
+    "screenshots": [],
+    "isFeatured": true
+  },
+  {
+    "id": "palera1n",
+    "name": "palera1n",
+    "category": "jailbreak",
+    "summary": "基于 checkm8 硬件漏洞的越狱方案，支持 A11 及更早芯片，可在较新系统上使用。",
+    "detail": "checkm8 是 BootROM 级漏洞，无法通过系统更新修复，因此 palera1n 能在较新的 iOS 版本上继续工作。代价是需要电脑连接引导，并且部分系统功能与安全机制会被削弱。",
+    "symbol": "key.fill",
+    "developer": "palera1n team",
+    "developerURL": "https://github.com/palera1n",
+    "githubURL": "https://github.com/palera1n/palera1n",
+    "downloadURL": "https://github.com/palera1n/palera1n/releases",
+    "sourceURL": "https://github.com/palera1n/palera1n",
+    "tutorialURL": "https://github.com/palera1n/palera1n/blob/main/README.md",
+    "supportedIOS": [
+      "iOS 15.0 及以上（以官方支持表为准）"
+    ],
+    "supportedDevices": [
+      "A11 及更早芯片：iPhone 8 / iPhone X 及更旧机型"
+    ],
+    "compatibility": "partial",
+    "verificationNote": "checkm8 只存在于旧芯片；A12 及之后的设备无法使用该方案。",
+    "risk": "caution",
+    "tags": [
+      "palera1n",
+      "jailbreak",
+      "checkm8",
+      "越狱"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "unc0ver",
+    "name": "unc0ver",
+    "category": "jailbreak",
+    "summary": "老牌越狱工具，覆盖 iOS 11 – 14.8 的多个版本，社区文档与插件兼容性资料丰富。",
+    "detail": "unc0ver 在 iOS 11 至 14.x 时代是最主流的越狱工具之一。它的适用版本跨度大，不同子版本对应的漏洞与稳定性差异明显，安装前务必确认自己的系统版本是否在支持列表内。",
+    "symbol": "wrench.and.screwdriver.fill",
+    "developer": "Pwn20wnd",
+    "githubURL": "https://github.com/pwn20wndstuff/Undecimus",
+    "sourceURL": "https://unc0ver.dev",
+    "supportedIOS": [
+      "iOS 11.0 – 14.8"
+    ],
+    "supportedDevices": [],
+    "compatibility": "partial",
+    "verificationNote": "项目已停止维护，仅适合仍在旧系统上的设备；新系统请使用其他方案。",
+    "risk": "caution",
+    "tags": [
+      "unc0ver",
+      "jailbreak",
+      "越狱",
+      "legacy"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "trollinstallerx",
+    "name": "TrollInstallerX",
+    "category": "trollstore",
+    "summary": "在设备本地安装 TrollStore 的安装器，避免手动传文件到系统目录。",
+    "detail": "TrollInstallerX 通过系统漏洞把 TrollStore 相关的持久化助手写入设备，让后续的巨魔安装流程变成「点一下就好」。它本身只是安装器，最终能力仍由 TrollStore 提供。",
+    "symbol": "arrow.down.circle.fill",
+    "developer": "Alfie (alfiecg24)",
+    "developerURL": "https://github.com/alfiecg24",
+    "githubURL": "https://github.com/alfiecg24/TrollInstallerX",
+    "downloadURL": "https://github.com/alfiecg24/TrollInstallerX/releases",
+    "sourceURL": "https://github.com/alfiecg24/TrollInstallerX",
+    "tutorialURL": "https://github.com/alfiecg24/TrollInstallerX/blob/main/README.md",
+    "supportedIOS": [
+      "iOS 14.0 – 16.6.1"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "不同安装方式（MDC / KFD 等）对应不同版本区间，请对照官方表格选择。",
+    "risk": "caution",
+    "tags": [
+      "trollinstaller",
+      "trollstore",
+      "巨魔",
+      "安装器"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "altstore",
+    "name": "AltStore",
+    "category": "sideload",
+    "summary": "用个人开发者证书侧载 IPA 的经典方案，支持自签续期与 AltStore PAL。",
+    "detail": "AltStore 通过 AltServer（macOS / Windows）用你的 Apple ID 为 IPA 签名并安装，每 7 天需要续签一次。它是理解 iOS 侧载机制的最佳入口，也是 SideStore 等后继方案的基础。",
+    "symbol": "app.badge",
+    "developer": "Riley Testut",
+    "developerURL": "https://altstore.io",
+    "githubURL": "https://github.com/altstoreio/AltStore",
+    "downloadURL": "https://altstore.io",
+    "sourceURL": "https://github.com/altstoreio/AltStore",
+    "tutorialURL": "https://faq.altstore.io",
+    "supportedIOS": [
+      "iOS 12.2 及以上"
+    ],
+    "supportedDevices": [],
+    "compatibility": "partial",
+    "verificationNote": "免费 Apple ID 每 7 天需续签，且最多同时安装 3 个自签应用。",
+    "risk": "community",
+    "tags": [
+      "altstore",
+      "sideload",
+      "侧载",
+      "自签",
+      "ipa"
+    ],
+    "screenshots": [],
+    "isFeatured": true
+  },
+  {
+    "id": "sidestore",
+    "name": "SideStore",
+    "category": "sideload",
+    "summary": "AltStore 的去中心化替代：用 WireGuard + 本地服务器在设备上完成续签，不需要电脑常开。",
+    "detail": "SideStore 通过设备内的配对文件与本地 VPN 完成签名续期，减少了「必须有电脑」的限制。首次配置需要电脑，之后大多可以在手机上完成。",
+    "symbol": "arrow.triangle.2.circlepath",
+    "developer": "SideStore Team",
+    "developerURL": "https://sidestore.io",
+    "githubURL": "https://github.com/SideStore/SideStore",
+    "downloadURL": "https://github.com/SideStore/SideStore/releases",
+    "sourceURL": "https://github.com/SideStore/SideStore",
+    "tutorialURL": "https://docs.sidestore.io",
+    "supportedIOS": [
+      "iOS 14.0 及以上"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "配对文件与 Apple ID 验证步骤较繁琐，请按官方文档逐条操作。",
+    "risk": "community",
+    "tags": [
+      "sidestore",
+      "sideload",
+      "侧载",
+      "续签"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "sideloadly",
+    "name": "Sideloadly",
+    "category": "sideload",
+    "summary": "Windows / macOS 上的一键 IPA 签名安装工具，支持普通 Apple ID 与开发者账号。",
+    "detail": "Sideloadly 是闭源但长期维护的桌面侧载工具，界面简单，适合在 Windows 上给 iPhone 安装自签 IPA。它需要手机端信任证书，并同样受 7 天有效期与设备数量限制。",
+    "symbol": "desktopcomputer",
+    "developer": "Sideloadly",
+    "developerURL": "https://sideloadly.io",
+    "sourceURL": "https://sideloadly.io",
+    "tutorialURL": "https://sideloadly.io",
+    "supportedIOS": [
+      "iOS 12 及以上（以官网说明为准）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "闭源工具，签名过程需要输入 Apple ID，请只在可信设备上使用。",
+    "risk": "community",
+    "tags": [
+      "sideloadly",
+      "windows",
+      "侧载",
+      "ipa",
+      "自签"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "ipatool",
+    "name": "ipatool",
+    "category": "ipa",
+    "summary": "命令行工具：用你自己的 Apple ID 从 App Store 下载已购应用的 IPA 备用。",
+    "detail": "ipatool 通过 App Store 的私有接口下载你账号已购买的应用包，常用于备份、离线安装或在多设备间复用。它不会绕过购买校验，也不提供他人账号的应用。",
+    "symbol": "terminal.fill",
+    "developer": "Majd Alfhaily",
+    "developerURL": "https://github.com/majd",
+    "githubURL": "https://github.com/majd/ipatool",
+    "downloadURL": "https://github.com/majd/ipatool/releases",
+    "sourceURL": "https://github.com/majd/ipatool",
+    "tutorialURL": "https://github.com/majd/ipatool/blob/main/README.md",
+    "supportedIOS": [
+      "与设备系统版本无关（桌面命令行工具）"
+    ],
+    "supportedDevices": [
+      "macOS / Windows / Linux"
+    ],
+    "compatibility": "pending",
+    "verificationNote": "需要有效的 App Store 账号；下载的 IPA 仅限本人账号授权范围内使用。",
+    "risk": "official",
+    "tags": [
+      "ipatool",
+      "ipa",
+      "appstore",
+      "cli",
+      "备份"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "misaka",
+    "name": "Misaka",
+    "category": "theming",
+    "summary": "免越狱的系统美化与功能定制集合，通过漏洞加载补丁类插件（部分版本）。",
+    "detail": "Misaka 把免越狱可用的补丁整理成插件市场，覆盖图标、状态栏、控制中心等。不同 iOS 版本可用的能力差别很大，部分功能依赖特定漏洞，系统更新后可能失效。",
+    "symbol": "paintpalette.fill",
+    "developer": "straight-tamago",
+    "developerURL": "https://github.com/straight-tamago",
+    "githubURL": "https://github.com/straight-tamago/misaka",
+    "downloadURL": "https://github.com/straight-tamago/misaka/releases",
+    "sourceURL": "https://github.com/straight-tamago/misaka",
+    "tutorialURL": "https://github.com/straight-tamago/misaka/blob/main/README.md",
+    "supportedIOS": [
+      "iOS 15.0 – 16.x（以官方表格为准）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "免越狱插件依赖未修复的漏洞，升级系统后可能不可用，甚至需要重新配置。",
+    "risk": "caution",
+    "tags": [
+      "misaka",
+      "美化",
+      "免越狱",
+      "插件"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "purekfd",
+    "name": "PureKFD",
+    "category": "theming",
+    "summary": "免越狱的包管理器，用于安装 KFD 类美化与功能补丁。",
+    "detail": "PureKFD 提供图形化的补丁安装界面，把 KFD（内核文件描述符）类漏洞的利用过程包装成可点选的插件。它同样受版本限制，并可能在系统更新后失效。",
+    "symbol": "shippingbox.fill",
+    "developer": "PureKFD",
+    "developerURL": "https://github.com/PureKFD",
+    "githubURL": "https://github.com/PureKFD/PureKFD",
+    "downloadURL": "https://github.com/PureKFD/PureKFD/releases",
+    "sourceURL": "https://github.com/PureKFD/PureKFD",
+    "supportedIOS": [
+      "iOS 16.x（以官方说明为准）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "支持范围经常变化，请先看仓库的版本支持表再操作。",
+    "risk": "caution",
+    "tags": [
+      "purekfd",
+      "kfd",
+      "美化",
+      "免越狱"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "livecontainer",
+    "name": "LiveContainer",
+    "category": "utilities",
+    "summary": "在容器里「运行」IPA，不必真正安装到桌面，适合搭配 TrollStore / SideStore 使用。",
+    "detail": "LiveContainer 把 IPA 跑在一个宿主 App 的进程里，因此可以绕过部分签名与安装数量限制。它需要宿主容器本身已被签名（例如通过 TrollStore 安装），并不是万能的免签名方案。",
+    "symbol": "square.on.square.dashed",
+    "developer": "LiveContainer",
+    "developerURL": "https://github.com/LiveContainer",
+    "githubURL": "https://github.com/LiveContainer/LiveContainer",
+    "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases",
+    "sourceURL": "https://github.com/LiveContainer/LiveContainer",
+    "supportedIOS": [
+      "iOS 14.0 及以上（取决于宿主签名方式）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "宿主 App 必须先被可信签名；部分应用存在兼容性限制。",
+    "risk": "caution",
+    "tags": [
+      "livecontainer",
+      "容器",
+      "ipa",
+      "trollstore"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "theos",
+    "name": "Theos",
+    "category": "devTools",
+    "summary": "iOS 越狱插件（tweak）开发的事实标准工具链，内置 tweak、命令行工具等模板。",
+    "detail": "Theos 提供 make 模板、Logos 预处理语法与打包流程，是 Cydia / Sileo 生态里绝大多数插件的构建基础。即使不做越狱开发，它也是理解 iOS 注入机制的最好材料。",
+    "symbol": "hammer.fill",
+    "developer": "Theos Team",
+    "developerURL": "https://github.com/theos",
+    "githubURL": "https://github.com/theos/theos",
+    "downloadURL": "https://github.com/theos/theos",
+    "sourceURL": "https://github.com/theos/theos",
+    "tutorialURL": "https://theos.dev/docs/",
+    "supportedIOS": [
+      "构建端：macOS / Linux",
+      "目标：iOS 越狱环境"
+    ],
+    "supportedDevices": [],
+    "compatibility": "verified",
+    "verificationNote": "官方文档持续更新；不同 SDK 版本需要匹配对应的 Xcode 工具链。",
+    "risk": "official",
+    "tags": [
+      "theos",
+      "tweak",
+      "开发",
+      "logos",
+      "插件"
+    ],
+    "screenshots": [],
+    "isFeatured": true
+  },
+  {
+    "id": "ellekit",
+    "name": "ElleKit",
+    "category": "tweak",
+    "summary": "现代越狱环境的注入框架，替代旧版 Substitute / libhooker 的 rootless 方案。",
+    "detail": "ElleKit 提供 tweak 注入与 hook 的基础设施，被 rootless 越狱（如 Dopamine、palera1n rootless）广泛采用。插件开发者需要针对它编译，普通用户通常不用单独安装。",
+    "symbol": "ant.fill",
+    "developer": "elevatetheshell",
+    "developerURL": "https://github.com/elevatetheshell",
+    "githubURL": "https://github.com/elevatetheshell/ElleKit",
+    "downloadURL": "https://github.com/elevatetheshell/ElleKit/releases",
+    "sourceURL": "https://github.com/elevatetheshell/ElleKit",
+    "supportedIOS": [
+      "iOS 15.0 及以上（rootless）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "属于基础设施，误装或版本不匹配会导致大量插件失效。",
+    "risk": "caution",
+    "tags": [
+      "ellekit",
+      "tweak",
+      "注入",
+      "rootless",
+      "hook"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "sileo",
+    "name": "Sileo",
+    "category": "repo",
+    "summary": "现代化越狱包管理器，界面接近 App Store，支持软件源与队列安装。",
+    "detail": "Sileo 是目前越狱环境中最常用的包管理器之一，几乎所有主流源都提供 Sileo 支持。它本身是客户端，真正的软件包仍来自各个 Repo。",
+    "symbol": "cylinder.split.1x2.fill",
+    "developer": "Sileo Team",
+    "developerURL": "https://github.com/Sileo",
+    "githubURL": "https://github.com/Sileo/Sileo",
+    "downloadURL": "https://github.com/Sileo/Sileo/releases",
+    "sourceURL": "https://github.com/Sileo/Sileo",
+    "supportedIOS": [
+      "iOS 11.0 及以上（需已越狱）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "必须已有越狱环境才能安装，不能直接在未越狱系统上运行。",
+    "risk": "caution",
+    "tags": [
+      "sileo",
+      "repo",
+      "包管理器",
+      "越狱"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "zebra",
+    "name": "Zebra",
+    "category": "repo",
+    "summary": "轻量越狱包管理器，兼容 Cydia 源，界面简洁、资源占用低。",
+    "detail": "Zebra 是 Sileo 之外的另一种包管理器选择，兼容传统 Cydia 源，适合在资源有限的旧设备上使用。",
+    "symbol": "square.stack.3d.up.fill",
+    "developer": "Zebra Team",
+    "developerURL": "https://github.com/zbrateam",
+    "githubURL": "https://github.com/zbrateam/Zebra",
+    "downloadURL": "https://github.com/zbrateam/Zebra/releases",
+    "sourceURL": "https://github.com/zbrateam/Zebra",
+    "supportedIOS": [
+      "iOS 12.0 及以上（需已越狱）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "维护节奏不固定，新版系统可能需要候选版本。",
+    "risk": "caution",
+    "tags": [
+      "zebra",
+      "repo",
+      "包管理器",
+      "cydia"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "procursus",
+    "name": "Procursus",
+    "category": "repo",
+    "summary": "rootless 越狱使用的 bootstrap（基础文件系统层），提供 apt 与命令行环境。",
+    "detail": "Procursus 提供越狱环境的 bootstrap 包：apt、shell、常用库与权限布局。rootless 越狱下它通常挂在 /var/jb，替代了传统 Cydia 的 bootstrap。",
+    "symbol": "folder.badge.gearshape",
+    "developer": "Procursus Team",
+    "developerURL": "https://github.com/ProcursusTeam",
+    "githubURL": "https://github.com/ProcursusTeam/Procursus",
+    "downloadURL": "https://github.com/ProcursusTeam/Procursus",
+    "sourceURL": "https://github.com/ProcursusTeam/Procursus",
+    "supportedIOS": [
+      "iOS 12.0 及以上（rootless）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "通常由越狱工具自动安装，不建议手动替换。",
+    "risk": "caution",
+    "tags": [
+      "procursus",
+      "bootstrap",
+      "rootless",
+      "apt"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "bootstrap-roothide",
+    "name": "Bootstrap (roothide)",
+    "category": "jailbreak",
+    "summary": "另一种 rootless 越狱引导与 bootstrap 实现，与 Dopamine 生态并行。",
+    "detail": "roothide 的 Bootstrap 把越狱环境隔离到独立目录，插件与系统文件互不影响，适合想降低系统污染的用户。它与 Dopamine 属于不同生态，插件需要对应编译。",
+    "symbol": "square.split.2x2.fill",
+    "developer": "roothide",
+    "developerURL": "https://github.com/roothide",
+    "githubURL": "https://github.com/roothide/Bootstrap",
+    "downloadURL": "https://github.com/roothide/Bootstrap/releases",
+    "sourceURL": "https://github.com/roothide/Bootstrap",
+    "supportedIOS": [
+      "iOS 15.0 – 16.x（以官方说明为准）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "与主流 rootless 越狱的插件包不通用，安装前请确认生态。",
+    "risk": "caution",
+    "tags": [
+      "bootstrap",
+      "roothide",
+      "rootless",
+      "越狱"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "legacy-ios-kit",
+    "name": "Legacy iOS Kit",
+    "category": "jailbreak",
+    "summary": "面向老旧 iPhone / iPad 的一体化工具：降级、修复、越狱与刷机。",
+    "detail": "Legacy iOS Kit 把 checkm8 设备的降级、blob 恢复、越狱与系统修复流程脚本化，适合折腾 iPhone 5s – X 时代的旧设备。",
+    "symbol": "clock.arrow.circlepath",
+    "developer": "Luke ZGD",
+    "developerURL": "https://github.com/LukeZGD",
+    "githubURL": "https://github.com/LukeZGD/Legacy-iOS-Kit",
+    "downloadURL": "https://github.com/LukeZGD/Legacy-iOS-Kit/releases",
+    "sourceURL": "https://github.com/LukeZGD/Legacy-iOS-Kit",
+    "tutorialURL": "https://github.com/LukeZGD/Legacy-iOS-Kit/wiki",
+    "supportedIOS": [
+      "目标设备：iOS 10 – 15 的老设备"
+    ],
+    "supportedDevices": [
+      "checkm8 设备（A7 – A11）"
+    ],
+    "compatibility": "pending",
+    "verificationNote": "涉及刷机与降级，操作失误可能无法开机，请先确认 SHSH blob 与设备型号。",
+    "risk": "caution",
+    "tags": [
+      "legacy",
+      "降级",
+      "刷机",
+      "checkm8",
+      "旧设备"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "nugget",
+    "name": "Nugget",
+    "category": "theming",
+    "summary": "通过备份写入的方式开启部分系统隐藏开关，免越狱修改设备行为。",
+    "detail": "Nugget 利用设备备份可写入的配置项，开启一些未在设置里暴露的功能（如部分动态效果、后台策略）。这类修改不需要越狱，但受系统版本限制，且可能影响稳定性。",
+    "symbol": "slider.horizontal.below.rectangle",
+    "developer": "leminlimez",
+    "developerURL": "https://github.com/leminlimez",
+    "githubURL": "https://github.com/leminlimez/Nugget",
+    "downloadURL": "https://github.com/leminlimez/Nugget/releases",
+    "sourceURL": "https://github.com/leminlimez/Nugget",
+    "supportedIOS": [
+      "iOS 17.x – 18.x（以官方说明为准）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "依赖备份写入路径，系统更新后可能失效；仓库支持范围请以 README 为准。",
+    "risk": "caution",
+    "tags": [
+      "nugget",
+      "免越狱",
+      "美化",
+      "备份"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "xcodegen",
+    "name": "XcodeGen",
+    "category": "devTools",
+    "summary": "用 YAML 描述工程结构并生成 .xcodeproj，避免 pbxproj 冲突。",
+    "detail": "XcodeGen 让工程文件变成可读、可 review 的 project.yml，适合多人协作与 CI。iOS HUB 自己的工程文件也遵循同样的「结构即声明」思路。",
+    "symbol": "doc.badge.gearshape",
+    "developer": "Yonas Kolb",
+    "developerURL": "https://github.com/yonaskolb",
+    "githubURL": "https://github.com/yonaskolb/XcodeGen",
+    "downloadURL": "https://github.com/yonaskolb/XcodeGen/releases",
+    "sourceURL": "https://github.com/yonaskolb/XcodeGen",
+    "tutorialURL": "https://github.com/yonaskolb/XcodeGen/blob/master/Docs/ProjectSpec.md",
+    "supportedIOS": [
+      "构建端工具（macOS）"
+    ],
+    "supportedDevices": [
+      "macOS"
+    ],
+    "compatibility": "verified",
+    "verificationNote": "只影响工程生成，不影响 App 运行时。",
+    "risk": "official",
+    "tags": [
+      "xcodegen",
+      "xcodeproj",
+      "ci",
+      "开发"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "pymobiledevice3",
+    "name": "pymobiledevice3",
+    "category": "devTools",
+    "summary": "纯 Python 实现的 iOS 设备通信工具，覆盖 usbmuxd、配对、诊断与部分服务调用。",
+    "detail": "pymobiledevice3 可以在 Windows / macOS / Linux 上与 iPhone 通信，常用于读取设备信息、挂载开发者镜像、调试与分析。它是 libimobiledevice 的现代化替代之一。",
+    "symbol": "cable.connector",
+    "developer": "doronz88",
+    "developerURL": "https://github.com/doronz88",
+    "githubURL": "https://github.com/doronz88/pymobiledevice3",
+    "downloadURL": "https://github.com/doronz88/pymobiledevice3",
+    "sourceURL": "https://github.com/doronz88/pymobiledevice3",
+    "tutorialURL": "https://github.com/doronz88/pymobiledevice3/blob/master/README.md",
+    "supportedIOS": [
+      "iOS 12 及以上（视具体服务而定）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "部分能力需要开发者镜像与配对记录，且随系统版本变化。",
+    "risk": "official",
+    "tags": [
+      "python",
+      "usbmuxd",
+      "调试",
+      "设备通信"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "libimobiledevice",
+    "name": "libimobiledevice",
+    "category": "devTools",
+    "summary": "跨平台的 iOS 设备通信库与命令行工具集，ideviceinfo、ideviceinstaller 等均来自这里。",
+    "detail": "libimobiledevice 提供与 iTunes 同类的设备通信能力，Linux 上的设备管理、备份与安装几乎都基于它。Windows 上也有预编译版本可用。",
+    "symbol": "externaldrive.connected.to.line.below",
+    "developer": "libimobiledevice",
+    "developerURL": "https://libimobiledevice.org",
+    "githubURL": "https://github.com/libimobiledevice/libimobiledevice",
+    "downloadURL": "https://github.com/libimobiledevice/libimobiledevice/releases",
+    "sourceURL": "https://libimobiledevice.org",
+    "tutorialURL": "https://libimobiledevice.org/#getting-started",
+    "supportedIOS": [
+      "iOS 12 及以上（视具体工具而定）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "新系统通常需要配套的较新版本与 usbmuxd 服务。",
+    "risk": "official",
+    "tags": [
+      "libimobiledevice",
+      "ideviceinstaller",
+      "跨平台",
+      "设备通信"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "alamofire",
+    "name": "Alamofire",
+    "category": "openSource",
+    "summary": "Swift 生态最经典的 HTTP 网络库，链式请求与响应序列化 API 影响了一代 iOS 项目。",
+    "detail": "虽然 URLSession + async/await 已经能覆盖多数场景，Alamofire 在拦截器、重试、上传进度等场景仍很省事，也适合作为学习网络层抽象范式的样本。",
+    "symbol": "network",
+    "developer": "Alamofire Software Foundation",
+    "developerURL": "https://github.com/Alamofire",
+    "githubURL": "https://github.com/Alamofire/Alamofire",
+    "downloadURL": "https://github.com/Alamofire/Alamofire",
+    "sourceURL": "https://github.com/Alamofire/Alamofire",
+    "tutorialURL": "https://github.com/Alamofire/Alamofire/blob/master/Documentation/Usage.md",
+    "supportedIOS": [
+      "iOS 13.0 及以上（以最新版本为准）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "最低系统版本随大版本变化，接入前请核对 Package.swift。",
+    "risk": "official",
+    "tags": [
+      "swift",
+      "网络",
+      "http",
+      "开源"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "kingfisher",
+    "name": "Kingfisher",
+    "category": "openSource",
+    "summary": "Swift 图片下载与缓存库，支持内存 / 磁盘缓存与渐进式加载。",
+    "detail": "Kingfisher 几乎是 Swift 项目里最常见的图片加载方案：异步下载、自动缓存、取消请求、占位图与过渡动画都有现成实现。iOS HUB 的图标加载后续也会替换成它。",
+    "symbol": "photo.stack",
+    "developer": "onevcat",
+    "developerURL": "https://github.com/onevcat",
+    "githubURL": "https://github.com/onevcat/Kingfisher",
+    "downloadURL": "https://github.com/onevcat/Kingfisher",
+    "sourceURL": "https://github.com/onevcat/Kingfisher",
+    "tutorialURL": "https://github.com/onevcat/Kingfisher/wiki",
+    "supportedIOS": [
+      "iOS 13.0 及以上（以最新版本为准）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "SwiftUI 集成需要 SwiftUI 支持版本，注意与 AsyncImage 的功能重叠。",
+    "risk": "official",
+    "tags": [
+      "swift",
+      "图片",
+      "缓存",
+      "开源"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "snapkit",
+    "name": "SnapKit",
+    "category": "openSource",
+    "summary": "Auto Layout 的链式 DSL，让 UIKit 布局代码更短、更易读。",
+    "detail": "SnapKit 用闭包式语法替代 NSLayoutConstraint 的冗长写法，在维护期较长的 UIKit 项目中很常见。纯 SwiftUI 项目不需要它，但维护老项目时值得了解。",
+    "symbol": "rectangle.3.group",
+    "developer": "SnapKit",
+    "developerURL": "https://github.com/SnapKit",
+    "githubURL": "https://github.com/SnapKit/SnapKit",
+    "downloadURL": "https://github.com/SnapKit/SnapKit",
+    "sourceURL": "https://github.com/SnapKit/SnapKit",
+    "tutorialURL": "https://github.com/SnapKit/SnapKit#usage",
+    "supportedIOS": [
+      "iOS 12.0 及以上（以最新版本为准）"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "仅适用于 UIKit，SwiftUI 布局不需要。",
+    "risk": "official",
+    "tags": [
+      "swift",
+      "uikit",
+      "autolayout",
+      "开源"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "apple-security-updates",
+    "name": "Apple 安全更新公告",
+    "category": "security",
+    "summary": "苹果官方安全更新索引，按产品列出已修复的 CVE、影响范围与修复版本。",
+    "detail": "这是核对「某个 iOS 版本修了什么漏洞」的第一手来源。研究越狱或评估风险时，应以此处的 CVE 编号与受影响版本为准，而不是社区传言。",
+    "symbol": "lock.shield.fill",
+    "developer": "Apple",
+    "developerURL": "https://support.apple.com",
+    "sourceURL": "https://support.apple.com/en-us/100100",
+    "tutorialURL": "https://support.apple.com/en-us/102657",
+    "supportedIOS": [
+      "全部 iOS / iPadOS 版本"
+    ],
+    "supportedDevices": [
+      "全部 Apple 设备"
+    ],
+    "compatibility": "verified",
+    "verificationNote": "官方页面，长期有效；建议以英文页面为准，中文页可能略有延迟。",
+    "risk": "official",
+    "tags": [
+      "apple",
+      "cve",
+      "安全",
+      "公告",
+      "漏洞"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "project-zero",
+    "name": "Google Project Zero",
+    "category": "security",
+    "summary": "顶级安全研究团队的公开博客，包含大量 iOS / macOS 漏洞的完整分析。",
+    "detail": "Project Zero 的 iOS 相关文章通常会给出漏洞成因、利用路径与修复时间线，是学习 iOS 安全模型与攻击面的高质量材料。文章偏研究向，不提供可直接使用的利用工具。",
+    "symbol": "eye.trianglebadge.exclamationmark",
+    "developer": "Google Project Zero",
+    "developerURL": "https://googleprojectzero.blogspot.com",
+    "sourceURL": "https://googleprojectzero.blogspot.com",
+    "tutorialURL": "https://googleprojectzero.blogspot.com/p/about-project-zero.html",
+    "supportedIOS": [
+      "研究资料，与设备版本无关"
+    ],
+    "supportedDevices": [],
+    "compatibility": "verified",
+    "verificationNote": "属于研究资料与安全公告，不是可直接使用的工具。",
+    "risk": "official",
+    "tags": [
+      "安全研究",
+      "漏洞",
+      "ios",
+      "p0"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "apple-developer-news",
+    "name": "Apple Developer News",
+    "category": "news",
+    "summary": "苹果开发者官网公告，包含 SDK 变更、审核政策与新系统发布节奏。",
+    "detail": "想知道「新系统什么时候发布」「App Store 政策改了什么」，这里比媒体转述更可靠。iOS HUB 的资讯模块会直接解析它的 RSS。",
+    "symbol": "swift",
+    "developer": "Apple",
+    "developerURL": "https://developer.apple.com",
+    "sourceURL": "https://developer.apple.com/news/",
+    "tutorialURL": "https://developer.apple.com/news/rss/news.rss",
+    "supportedIOS": [
+      "信息源，与设备版本无关"
+    ],
+    "supportedDevices": [],
+    "compatibility": "verified",
+    "verificationNote": "官方 RSS 源，App 内资讯模块直接解析。",
+    "risk": "official",
+    "tags": [
+      "apple",
+      "developer",
+      "公告",
+      "rss"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "github-blog",
+    "name": "GitHub Blog",
+    "category": "news",
+    "summary": "GitHub 官方博客，覆盖 Releases、Actions、Copilot 与 API 变更。",
+    "detail": "依赖 GitHub API 的工具都需要关注这里的限流与接口变更公告。iOS HUB 的 GitHub 探索模块也受其 API 策略影响。",
+    "symbol": "chevron.left.forwardslash.chevron.right",
+    "developer": "GitHub",
+    "developerURL": "https://github.com",
+    "sourceURL": "https://github.blog/",
+    "tutorialURL": "https://github.blog/feed/",
+    "supportedIOS": [
+      "信息源，与设备版本无关"
+    ],
+    "supportedDevices": [],
+    "compatibility": "verified",
+    "verificationNote": "官方 RSS 源。",
+    "risk": "official",
+    "tags": [
+      "github",
+      "blog",
+      "api",
+      "rss"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "chariz-repo",
+    "name": "Chariz 软件源",
+    "category": "repo",
+    "summary": "商业越狱插件源，收录大量付费与免费插件，支持 Sileo / Zebra。",
+    "detail": "Chariz 是较有影响力的商业源之一，插件质量与维护状态差异较大。添加源前请确认它与你的越狱环境（rootless / roothide）匹配。",
+    "symbol": "cylinder.split.1x2",
+    "developer": "Chariz",
+    "developerURL": "https://chariz.com",
+    "sourceURL": "https://repo.chariz.com",
+    "tutorialURL": "https://chariz.com",
+    "supportedIOS": [
+      "需已越狱，版本取决于插件"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "第三方商业源，插件兼容性与安全性需逐个核对，不代表官方推荐。",
+    "risk": "community",
+    "tags": [
+      "repo",
+      "chariz",
+      "插件",
+      "商业源"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "havoc-repo",
+    "name": "Havoc 软件源",
+    "category": "repo",
+    "summary": "另一个常见越狱插件市场，含付费插件与开发者分成体系。",
+    "detail": "Havoc 提供插件托管与支付，很多独立开发者在此发布作品。与所有第三方源一样，安装前应确认插件是否适配当前越狱类型。",
+    "symbol": "bag.fill",
+    "developer": "Havoc",
+    "developerURL": "https://havoc.app",
+    "sourceURL": "https://havoc.app",
+    "tutorialURL": "https://havoc.app",
+    "supportedIOS": [
+      "需已越狱，版本取决于插件"
+    ],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "第三方商业源，仅作索引；不保证任何插件的兼容性与安全性。",
+    "risk": "community",
+    "tags": [
+      "repo",
+      "havoc",
+      "插件",
+      "商业源"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "gta-san-andreas",
+    "name": "GTA：圣安地列斯",
+    "category": "port",
+    "summary": "Rockstar 官方移植的开放世界经典，App Store 直接购买安装，是「真·官方 iOS 移植」的代表。",
+    "detail": "2004 年的 PS2 大作，iOS 版由 Rockstar 自己移植，支持触屏与手柄。这类官方移植是手机玩大作最稳的路径：不需要越狱、不需要模拟器、可以正常更新。",
+    "symbol": "gamecontroller.fill",
+    "developer": "Rockstar Games",
+    "sourceURL": "https://www.rockstargames.com/",
+    "supportedIOS": [
+      "iOS 15.0 及以上（以 App Store 页面为准）"
+    ],
+    "supportedDevices": [
+      "iPhone / iPad"
+    ],
+    "compatibility": "pending",
+    "verificationNote": "本条目不给直达 App Store 链接，避免指向仿冒页面：请在 App Store 搜索「GTA: San Andreas」并核对开发者为 Rockstar Games。",
+    "risk": "official",
+    "tags": [
+      "gta",
+      "移植",
+      "官方",
+      "开放世界"
+    ],
+    "screenshots": [],
+    "isFeatured": false,
+    "developerURL": "https://www.rockstargames.com/"
+  },
+  {
+    "id": "gta5-ios-status",
+    "name": "GTA V（iPhone 运行现状）",
+    "category": "port",
+    "summary": "GTA V 没有官方 iOS 版本。网传「iPhone 跑 GTA V」多为 Windows 模拟 / 云串流 / 远程串流，不是可安装的 iOS 移植。",
+    "detail": "截至本条收录，Rockstar 未发布 GTA V 的 iOS 版。凡是提供「下载即玩 IPA」的，基本可以判定为盗版改包或钓鱼：正版 GTA V 依赖 R 星启动器与账号验证，不可能以单个 IPA 分发。想看画面可以用串流方案，但那是「远程玩 PC」，不是移植。",
+    "symbol": "gamecontroller.fill",
+    "developer": "Rockstar Games（无 iOS 版）",
+    "sourceURL": "https://www.rockstargames.com/",
+    "supportedIOS": [],
+    "supportedDevices": [],
+    "compatibility": "unsupported",
+    "verificationNote": "求证型条目：只用于说明现状与风险，本 App 不提供任何下载。",
+    "risk": "high",
+    "tags": [
+      "gta5",
+      "移植",
+      "传闻",
+      "求证",
+      "串流"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "cyberpunk-2077-ios-status",
+    "name": "赛博朋克 2077（iPhone 运行现状）",
+    "category": "port",
+    "summary": "《赛博朋克 2077》没有 iOS 版。CDPR 推出的是 macOS（Apple Silicon）版本，iPhone / iPad 装不了。",
+    "detail": "macOS 版需要 M 系列芯片的 Mac，和 iOS 是两个分发渠道。iOS 端所谓「2077 版」要么是云游戏/串流，要么是改包，不具备可维护性。同类「手机跑 3A」的宣传，先问一句：它是原生移植、串流，还是模拟器？",
+    "symbol": "gamecontroller.fill",
+    "developer": "CD PROJEKT RED（无 iOS 版）",
+    "sourceURL": "https://www.cyberpunk.net/",
+    "supportedIOS": [],
+    "supportedDevices": [],
+    "compatibility": "unsupported",
+    "verificationNote": "求证型条目：仅说明现状，不提供下载。",
+    "risk": "high",
+    "tags": [
+      "2077",
+      "赛博朋克",
+      "移植",
+      "求证",
+      "串流"
+    ],
+    "screenshots": [],
+    "isFeatured": false
+  },
+  {
+    "id": "switch-emulation-ios",
+    "name": "Switch 模拟（iOS 现状）",
+    "category": "port",
+    "summary": "iOS 上没有官方 Switch 模拟器。社区方案依赖 JIT、侧载与高性能设备，且存在明显的法律与账号风险。",
+    "detail": "任天堂对 Switch 模拟器持强硬态度，相关项目多次被下架或终止。iOS 端即使能跑，通常也要 JIT（多数方案依赖 TrollStore / 侧载），稳定性和合规性都不适合日常使用。想玩任天堂作品，最稳的仍是官方渠道或正统掌机。",
+    "symbol": "gamecontroller.fill",
+    "developer": "社区项目（无官方 iOS 版）",
+    "sourceURL": "https://github.com/Ryujinx/Ryujinx",
+    "supportedIOS": [],
+    "supportedDevices": [],
+    "compatibility": "pending",
+    "verificationNote": "求证型条目：不提供模拟器下载或游戏资源，请自行评估法律风险。",
+    "risk": "high",
+    "tags": [
+      "switch",
+      "模拟器",
+      "jit",
+      "风险",
+      "nintendo"
+    ],
+    "screenshots": [],
+    "isFeatured": false,
+    "githubURL": "https://github.com/Ryujinx/Ryujinx"
+  },
+  {
+    "id": "delta-emulator",
+    "name": "Delta",
+    "category": "port",
+    "summary": "App Store 上架的任天堂系模拟器（NES / SNES / N64 / GB / GBA / DS），免费无广告。",
+    "detail": "Delta 是 iOS 上少数「正面在 App Store 上架」的模拟器，由 Riley Testut 开发，界面接近原生，支持手柄与存档同步。它不开源但长期维护，是 iOS 模拟器的安全起点。",
+    "symbol": "gamecontroller.fill",
+    "developer": "Riley Testut",
+    "sourceURL": "https://github.com/rileytestut/Delta",
+    "supportedIOS": [
+      "iOS 14.0 及以上"
+    ],
+    "supportedDevices": [
+      "iPhone / iPad"
+    ],
+    "compatibility": "pending",
+    "verificationNote": "App Store 可搜到；ROM 需自备，请使用自己合法持有的游戏。",
+    "risk": "official",
+    "tags": [
+      "delta",
+      "模拟器",
+      "gba",
+      "n64",
+      "官方上架"
+    ],
+    "screenshots": [],
+    "isFeatured": false,
+    "developerURL": "https://github.com/rileytestut",
+    "githubURL": "https://github.com/rileytestut/Delta"
+  },
+  {
+    "id": "provenance-emulator",
+    "name": "Provenance",
+    "category": "port",
+    "summary": "多机种模拟器前端，已上架 App Store，覆盖 Atari / NES / SNES / N64 / PS1 / PSP 等。",
+    "detail": "Provenance 把多个 libretro 核心收进一个原生界面，支持手柄、金手指与存档管理。适合想「一个 App 玩多种老主机」的用户。",
+    "symbol": "gamecontroller.fill",
+    "developer": "Provenance Emu",
+    "sourceURL": "https://github.com/Provenance-Emu/Provenance",
+    "supportedIOS": [
+      "iOS 15.0 及以上"
+    ],
+    "supportedDevices": [
+      "iPhone / iPad"
+    ],
+    "compatibility": "pending",
+    "verificationNote": "App Store 可搜到；ROM 需自备。",
+    "risk": "official",
+    "tags": [
+      "provenance",
+      "模拟器",
+      "ps1",
+      "psp"
+    ],
+    "screenshots": [],
+    "isFeatured": false,
+    "developerURL": "https://github.com/Provenance-Emu",
+    "githubURL": "https://github.com/Provenance-Emu/Provenance"
+  },
+  {
+    "id": "utm-se",
+    "name": "UTM SE",
+    "category": "port",
+    "summary": "App Store 上架的虚拟机（无 JIT 版），可以在 iPhone 上装轻量 Linux 或老系统。",
+    "detail": "UTM SE 是 UTM 去掉 JIT 的合规版本，通过 App Store 审核。没有 JIT 意味着性能有限，但足够跑命令行 Linux、体验系统安装流程。想更接近真机性能需要 JIT 版本，那就要侧载。",
+    "symbol": "gamecontroller.fill",
+    "developer": "UTM App",
+    "sourceURL": "https://github.com/utmapp/UTM",
+    "supportedIOS": [
+      "iOS 14.0 及以上"
+    ],
+    "supportedDevices": [
+      "iPhone / iPad（建议 6GB 内存以上）"
+    ],
+    "compatibility": "pending",
+    "verificationNote": "App Store 上的版本为 SE（无 JIT），性能与桌面虚拟机差距较大。",
+    "risk": "official",
+    "tags": [
+      "utm",
+      "虚拟机",
+      "linux",
+      "qemu"
+    ],
+    "screenshots": [],
+    "isFeatured": false,
+    "developerURL": "https://github.com/utmapp",
+    "githubURL": "https://github.com/utmapp/UTM"
+  },
+  {
+    "id": "ppsspp",
+    "name": "PPSSPP",
+    "category": "port",
+    "summary": "PSP 模拟器，App Store 版可玩 PSP 游戏，支持手柄与分辨率提升。",
+    "detail": "PPSSPP 是 PSP 模拟里兼容性最好的开源实现，iOS 版已上架 App Store。它把 480×272 的画面拉伸到现代屏幕上依然可看，还支持存档与金手指。",
+    "symbol": "gamecontroller.fill",
+    "developer": "Henrik Rydgård",
+    "sourceURL": "https://github.com/hrydgard/ppsspp",
+    "supportedIOS": [
+      "iOS 12.0 及以上"
+    ],
+    "supportedDevices": [
+      "iPhone / iPad"
+    ],
+    "compatibility": "pending",
+    "verificationNote": "App Store 可搜到；ISO 需自备。",
+    "risk": "official",
+    "tags": [
+      "ppsspp",
+      "psp",
+      "模拟器",
+      "开源"
+    ],
+    "screenshots": [],
+    "isFeatured": false,
+    "developerURL": "https://github.com/hrydgard",
+    "githubURL": "https://github.com/hrydgard/ppsspp"
+  },
+  {
+    "id": "retroarch",
+    "name": "RetroArch",
+    "category": "port",
+    "summary": "全能模拟器前端（libretro），App Store 版支持大量核心，一个 App 覆盖几十种老主机。",
+    "detail": "RetroArch 是「前端 + 核心」架构：前端负责界面、存档、滤镜，核心负责具体主机模拟。功能极强但设置门槛也高，适合愿意折腾的人。",
+    "symbol": "gamecontroller.fill",
+    "developer": "Libretro",
+    "sourceURL": "https://github.com/libretro/RetroArch",
+    "supportedIOS": [
+      "iOS 15.0 及以上"
+    ],
+    "supportedDevices": [
+      "iPhone / iPad"
+    ],
+    "compatibility": "pending",
+    "verificationNote": "App Store 可获；核心需在 App 内下载，部分核心受版权限制。",
+    "risk": "official",
+    "tags": [
+      "retroarch",
+      "libretro",
+      "模拟器",
+      "全能"
+    ],
+    "screenshots": [],
+    "isFeatured": false,
+    "developerURL": "https://github.com/libretro",
+    "githubURL": "https://github.com/libretro/RetroArch"
+  }
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 没有引入 AndroidX，所以父主题用系统自带的 Material 主题 -->
+    <style name="Theme.HelloApk" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:colorPrimary">#FF2E7D32</item>
+        <item name="android:colorAccent">#FF43A047</item>
+        <item name="android:statusBarColor">#FF1B5E20</item>
+    </style>
+</resources>

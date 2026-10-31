@@ -1,0 +1,5 @@
+// 根构建脚本：这里只声明 Android Gradle 插件的版本，不真正应用。
+// 真正应用是在 app/build.gradle 里。apply false 表示"只下载不启用"。
+plugins {
+    id 'com.android.application' version '8.13.0' apply false
+}
